@@ -1519,6 +1519,9 @@ ThreadLocal 从理论上讲并不是用来解决多线程并发问题的，因�
 
 在一些场景 (尤其是使用线程池) 下，由于 ThreadLocal.ThreadLocalMap 的底层数据结构导致 ThreadLocal 有内存泄漏的情况，应该尽可能在每次使用 ThreadLocal 后手动调用 remove()，以避免出现 ThreadLocal 经典的内存泄漏甚至是造成自身业务混乱的风险。
 
+[源码|ThreadLocal的实现原理](https://juejin.im/post/59db31c16fb9a00a4843dc36)
+[深入分析ThreadLocal内存泄漏问题](https://blog.csdn.net/xiaolyuh123/article/details/79869659)
+
 ### 3. 可重入代码（Reentrant Code）
 
 这种代码也叫做纯代码（Pure Code），可以在代码执行的任何时刻中断它，转而去执行另外一段代码（包括递归调用它本身），而在控制权返回后，原来的程序不会出现任何错误。
